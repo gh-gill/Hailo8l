@@ -1,7 +1,7 @@
 from hailo_sdk_client import ClientRunner
 
 model_name = 'best'
-quantized_model_har_path = f'/home/sam/Hailo8l/model/runs/detect/retrain_yolov8n/weights/{model_name}_quantized_model.har'
+quantized_model_har_path = f'~/Hailo8l/model/runs/detect/retrain_yolov8n/weights/{model_name}_quantized_model.har'
 
 runner = ClientRunner(har=quantized_model_har_path)
 
