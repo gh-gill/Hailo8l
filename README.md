@@ -208,7 +208,7 @@ pip install ultralytics
 ###### ~/Hailo8l/datasets/labels/train */val                                        
 ```bash
 cd datasets
-python yolo_train_val_split.py --datapath="data" --train_pct=.8
+python ~/Hailo8l/steps/2_install_dataset/yolo_train_val_split.py --datapath="data" --train_pct=.8
 ```
 
 ```bash
