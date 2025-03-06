@@ -1,5 +1,5 @@
-train: /home/sam/Hailo8l/datasets/images/train
-val: /home/sam/Hailo8l/datasets/images/val
+train: /home/hmi/Hailo8l/datasets/images/train
+val: /home/hmi/Hailo8l/datasets/images/val
 
-nc: 2
-names: ['Green Cube', 'Red Ball']
+nc: 1
+names: ['Print']
