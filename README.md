@@ -178,8 +178,8 @@ wsl -d Ubuntu-22.04
 ```
 
 ### Get Guide
+#### from ~/
 ```bash
-#from ~/
 git clone git@github.com:gh-gill/Hailo8l.git
 ```
 
