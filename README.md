@@ -216,7 +216,7 @@ cd model
 
 ```bash
 #train model as pytorch
-yolo detect train data=config.yaml model=yolov8s.pt name=retrain_yolov8s project=./model/runs/detect epochs=100 batch=16
+yolo detect train data=~/Hailo8l/config.yaml model=yolov8s.pt name=retrain_yolov8s project=./model/runs/detect epochs=100 batch=16
 ```
 
 ### Convert to ONNX
