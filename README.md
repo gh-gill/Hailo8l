@@ -2,6 +2,20 @@
 # How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov8s on Windows (WSL2 Ubuntu)
 
 ## WSL Ubuntu
+```bash
+#list all installed linux distros
+wsl --list --all
+#list running linux distros
+wsl --list --running
+#get online available linux distros
+wsl --list --online
+#install a distro
+wsl --install <distro name>
+#open a specific linux distro
+wsl -d <Distro Name>
+#shutdown linux enviroment
+wsl --shutdown
+```
 
 ### Get Guide
 ```bash
