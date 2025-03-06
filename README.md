@@ -200,22 +200,14 @@ source venv_yolov8/bin/activate
 pip install ultralytics
 ```
 #### Create Dataset from Data created by Label Studio
-##### --datapath = "data" folder from Label Studio
-##### copy downloaded dataset folder from LabelStudio to ~/datasets/
+###### --datapath = "data" folder from Label Studio
+###### copy downloaded dataset folder from LabelStudio to ~/datasets/
 ###### this will create the folder structure
-###### ~/Hailo8l/datasets/images/train
-######                           /val
-######                   /labels/train
-######                           /val
+###### ~/Hailo8l/datasets/images/train */val 
+###### ~/Hailo8l/datasets/labels/train */val                                        
 ```bash
 cd datasets
 python yolo_train_val_split.py --datapath="data" --train_pct=.8
-# this will create the folder structure
-# ~/Hailo8l/datasets/images/train
-#                           /val
-#                   /labels/train
-#                           /val
-
 ```
 
 ```bash
