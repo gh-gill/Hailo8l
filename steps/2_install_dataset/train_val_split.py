@@ -41,12 +41,12 @@ cwd = os.getcwd()
 #train_txt_path = os.path.join(cwd,'data/train/labels')
 #val_img_path = os.path.join(cwd,'data/validation/images')
 #val_txt_path = os.path.join(cwd,'data/validation/labels')
-train: ~/Hailo8l/datasets/images/train
-val: ~/Hailo8l/datasets/images/val
-train_img_path = os.path.join(cwd,'~/Hailo8l/datasets/images/train')
-val_img_path = os.path.join(cwd,'~/Hailo8l/datasets/images/val')
-train_txt_path = os.path.join(cwd,'~/Hailo8l/datasets/labels/train')
-val_txt_path = os.path.join(cwd,'~/Hailo8l/datasets/labels/val')
+train: /Hailo8l/datasets/images/train
+val: /Hailo8l/datasets/images/val
+train_img_path = os.path.join(cwd,'/Hailo8l/datasets/images/train')
+val_img_path = os.path.join(cwd,'/Hailo8l/datasets/images/val')
+train_txt_path = os.path.join(cwd,'/Hailo8l/datasets/labels/train')
+val_txt_path = os.path.join(cwd,'/Hailo8l/datasets/labels/val')
 
 
 
