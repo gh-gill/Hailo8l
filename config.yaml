@@ -1,5 +1,5 @@
-train: ~/Hailo8l/datasets/images/train
-val: ~/Hailo8l/datasets/images/val
+train: datasets/images/train
+val: datasets/images/val
 
 nc: 1
 names: ['Print']
