@@ -190,6 +190,7 @@ sudo apt-get update
 ```
 
 ### Training
+#### Setup virtual env, activate and install packages
 ```bash
 cd Hailo8l
 sudo apt-get update 
