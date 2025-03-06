@@ -211,7 +211,7 @@ python steps/2_install_dataset/train_val_split.py --datapath="datasets/data" --t
 ```
 
 ```bash
-cd /Hailo8l/model
+cd model
 ```
 
 ```bash
