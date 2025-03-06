@@ -139,13 +139,48 @@ cd ..
 python hailo-rpi5-examples/basic_pipelines/detection.py -i rpi --hef pppv_v1.hef
 ```
 
-# How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov8n on Windows (WSL2 Ubuntu) Custom Objects and Labels
+# How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov8s on Windows (WSL2 Ubuntu) Custom Objects and Labels
 
-## WSL Ubuntu
+## WSL Ubuntu commands
+```bash
+#Install Windows Subsystem for Linux.
+wsl.exe --install
+#check status
+wsl--status
+#list all installed linux distros
+wsl --list --all
+#list running linux distros
+wsl --list --running
+#get online available linux distros
+wsl --list --online
+#install a distro
+wsl --install Ubuntu-22.04
+#Change wsl version number 1 or 2 on distro
+wsl –set-version [distro name] [wsl version number] 
+#open a specific linux distro
+wsl -d <Distro Name>
+#shutdown linux enviroment
+wsl --shutdown
+```
+
+## WSL Ubuntu setup
+```bash
+#Install Windows Subsystem for Linux.
+wsl.exe --install
+#check status
+wsl--status
+#get online available linux distros
+wsl --list --online
+#install a distro
+wsl --install Ubuntu-22.04
+#open linux distro
+wsl -d Ubuntu-22.04
+```
 
 ### Get Guide
 ```bash
-git clone https://github.com/BetaUtopia/Hailo8l.git
+#from ~/
+git clone git@github.com:gh-gill/Hailo8l.git
 ```
 
 ### Training
@@ -160,16 +195,30 @@ pip install ultralytics
 ```
 
 ```bash
-cd model
+cd datasets
+# --datapath = "data" folder from Label Studio
+# copy downloaded dataset folder from LabelStudio to ~/datasets/
+python yolo_train_val_split.py --datapath="data" --train_pct=.8
+# this will create the folder structure
+# ~/Hailo8l/datasets/images/train
+#                           /val
+#                   /labels/train
+#                           /val
+
 ```
 
 ```bash
-yolo detect train data=config.yaml model=yolov8n.pt name=retrain_yolov8n project=./model/runs/detect epochs=1000 batch=16
+cd ~/Hailo8l/model
+```
+
+```bash
+#train model as pytorch
+yolo detect train data=config.yaml model=yolov8s.pt name=retrain_yolov8s project=./model/runs/detect epochs=100 batch=16
 ```
 
 ### Convert to ONNX
 ```bash
-cd model/runs/detect/retrain_yolov8n/weights   
+cd ~/Hailo8l/model/runs/detect/retrain_yolov8s/weights   
 ```
 
 ```bash
