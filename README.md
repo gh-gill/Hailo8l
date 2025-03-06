@@ -1,5 +1,5 @@
 
-# How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov8n on Windows (WSL2 Ubuntu)
+# How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov8s on Windows (WSL2 Ubuntu)
 
 ## WSL Ubuntu
 
@@ -32,16 +32,16 @@ python yolo_train_val_split.py --datapath="data" --train_pct=.8
 ```
 
 ```bash
-cd model
+cd ~/model
 ```
 
 ```bash
-yolo detect train data=config.yaml model=yolov8n.pt name=retrain_yolov8n project=./runs/detect epochs=1000 batch=16
+yolo detect train data=config.yaml model=yolov8s.pt name=retrain_pppv project=./runs/detect epochs=100 batch=16
 ```
 
 ### Convert to ONNX
 ```bash
-cd runs/detect/retrain_yolov8n/weights   
+cd runs/detect/retrain_pppv/weights   
 ```
 
 ```bash
@@ -68,8 +68,8 @@ pip install pygraphviz
 ```
 
 ```bash
-pip install whl/hailo_dataflow_compiler-3.27.0-py3-none-linux_x86_64.whl
-pip install whl/hailo_model_zoo-2.11.0-py3-none-any.whl
+pip install whl/hailo_dataflow_compiler-3.28.0-py3-none-linux_x86_64.whl
+pip install whl/hailo_model_zoo-2.12.0-py3-none-any.whl
 ```
 
 ```bash
@@ -83,12 +83,12 @@ python hailo_model_zoo/hailo_model_zoo/datasets/create_coco_tfrecord.py calib201
 ```
 
 ```bash
-cd model/runs/detect/retrain_yolov8n/weights
+cd model/runs/detect/retrain_pppv/weights
 ```
 
 ### Parse
 ```bash
-hailomz parse --hw-arch hailo8l --ckpt ./best.onnx yolov8n
+hailomz parse --hw-arch hailo8l --ckpt ./best.onnx yolov8s
 ```
 
 ### Optimize
@@ -122,7 +122,7 @@ cd ..
 ```
 
 ```bash
-python hailo-rpi5-examples/basic_pipelines/detection.py -i rpi --hef yolov8n.hef
+python hailo-rpi5-examples/basic_pipelines/detection.py -i rpi --hef pppv_v1.hef
 ```
 
 # How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov8n on Windows (WSL2 Ubuntu) Custom Objects and Labels
