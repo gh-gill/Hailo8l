@@ -19,7 +19,7 @@ wsl --shutdown
 
 ### Get Guide
 ```bash
-git clone git@github.com:gh-gill/Hailo8l.git
+git clone https://github.com/gh-gill/Hailo8l.git
 ```
 
 ### Training
@@ -180,7 +180,7 @@ wsl -d Ubuntu-22.04
 ### Get Guide
 #### from ~/
 ```bash
-git clone git@github.com:gh-gill/Hailo8l.git
+git clone https://github.com/gh-gill/Hailo8l.git
 ```
 
 ### Training
