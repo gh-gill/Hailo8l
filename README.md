@@ -21,6 +21,13 @@ pip install ultralytics
 
 ```bash
 cd datasets
+# --datapath = data folder from Label Studio
+python yolo_train_val_split.py --datapath="data" --train_pct=.8
+# this create the folder structure
+# ~/Hailo8l/datasets/images/train
+#                           /val
+#                   /labels/train
+#                           /val
 
 ```
 
