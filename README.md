@@ -5,7 +5,7 @@
 
 ### Get Guide
 ```bash
-git clone https://github.com/BetaUtopia/Hailo8l.git
+git clone git@github.com:gh-gill/Hailo8l.git
 ```
 
 ### Training
@@ -17,6 +17,11 @@ sudo apt install python3.11 python3.11-venv
 python3.11 -m venv venv_yolov8
 source venv_yolov8/bin/activate
 pip install ultralytics
+```
+
+```bash
+cd datasets
+
 ```
 
 ```bash
