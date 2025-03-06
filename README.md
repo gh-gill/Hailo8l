@@ -207,7 +207,7 @@ pip install ultralytics
 ###### ~/Hailo8l/datasets/images/train */val 
 ###### ~/Hailo8l/datasets/labels/train */val                                        
 ```bash
-python steps/2_install_dataset/train_val_split.py --datapath="data" --train_pct=.8
+python steps/2_install_dataset/train_val_split.py --datapath="datasets/data" --train_pct=.8
 ```
 
 ```bash
