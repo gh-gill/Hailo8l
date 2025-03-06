@@ -183,21 +183,32 @@ wsl -d Ubuntu-22.04
 git clone https://github.com/gh-gill/Hailo8l.git
 ```
 
+### Add deadsnakes repository
+```bash
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update
+```
+
 ### Training
 ```bash
 cd Hailo8l
-sudo apt-get update
+sudo apt-get update 
 sudo apt-get install libpython3.11-stdlib libgl1-mesa-glx
 sudo apt install python3.11 python3.11-venv
 python3.11 -m venv venv_yolov8
 source venv_yolov8/bin/activate
 pip install ultralytics
 ```
-
+#### Create Dataset from Data created by Label Studio
+##### --datapath = "data" folder from Label Studio
+##### copy downloaded dataset folder from LabelStudio to ~/datasets/
+###### this will create the folder structure
+###### ~/Hailo8l/datasets/images/train
+######                           /val
+######                   /labels/train
+######                           /val
 ```bash
 cd datasets
-# --datapath = "data" folder from Label Studio
-# copy downloaded dataset folder from LabelStudio to ~/datasets/
 python yolo_train_val_split.py --datapath="data" --train_pct=.8
 # this will create the folder structure
 # ~/Hailo8l/datasets/images/train
