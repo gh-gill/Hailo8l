@@ -94,6 +94,9 @@ pip install pygraphviz
 
 ```bash
 pip install whl/hailo_dataflow_compiler-3.28.0-py3-none-linux_x86_64.whl
+```
+
+```bash
 pip install whl/hailo_model_zoo-2.12.0-py3-none-any.whl
 ```
 
@@ -104,6 +107,8 @@ git clone https://github.com/hailo-ai/hailo_model_zoo.git
 ### Install Custom dataset
 ```bash
 python steps/2_install_dataset/create_custom_tfrecord.py val
+```
+```bash
 python steps/2_install_dataset/create_custom_tfrecord.py train
 ```
 ### Parse
@@ -111,7 +116,6 @@ python steps/2_install_dataset/create_custom_tfrecord.py train
 python steps/3_process/parse.py
 ```
 ### Optimize
--Use your own username /home/USER
 ```bash
 python steps/3_process/optimize.py
 ```
