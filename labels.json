@@ -1,6 +1,6 @@
 {
     "detection_threshold": 0.5,
-    "max_boxes":2,
+    "max_boxes":200,
     "labels": [
       "background",
       "Print"
