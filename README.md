@@ -1,6 +1,6 @@
-# How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov8s on Windows (WSL2 Ubuntu) Custom Objects and Labels
+# How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov8s on Windows (WSL2 Ubuntu-22.02) Custom Objects and Labels
 
-## WSL Ubuntu commands
+#### Info on WSL commands
 ```bash
 #Install Windows Subsystem for Linux.
 wsl.exe --install
@@ -22,11 +22,10 @@ wsl -d <Distro Name>
 wsl --shutdown
 ```
 
-## WSL Ubuntu setup
+### On Windows WSL Ubuntu setup (If using docker skip this step)
 ```bash
-wsl --install Ubuntu-24.04
-wsl -d Ubuntu-24.04
-```
+wsl --install Ubuntu-22.04
+``` 
 
 ### Get Guide
 #### from ~/
@@ -44,7 +43,6 @@ sudo apt-get update
 #### Setup virtual env, activate and install packages
 ```bash
 cd Hailo8l
-sudo apt-get update 
 sudo apt-get install libpython3.11-stdlib libgl1-mesa-glx
 sudo apt install python3.11 python3.11-venv
 python3.11 -m venv venv_yolov8
@@ -58,7 +56,7 @@ pip install ultralytics
 ###### ~/Hailo8l/datasets/images/train */val 
 ###### ~/Hailo8l/datasets/labels/train */val                                        
 ```bash
-python steps/2_install_dataset/train_val_split.py --datapath="~/Hailo8l/datasets/data" --train_pct=.8
+python steps/2_install_dataset/train_val_split.py --datapath="datasets/data" --train_pct=.8
 ```
 ##### Edit files
 ###### Edit "config.yaml" & "labels.json" to match your dataset
