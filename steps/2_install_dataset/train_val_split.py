@@ -37,10 +37,10 @@ input_label_path = os.path.join(data_path,'labels')
 
 # Define paths to image and annotation folders
 cwd = os.getcwd()
-train_img_path = os.path.join(cwd,'~/Hailo8l/datasets/images/train')
-val_img_path = os.path.join(cwd,'~/Hailo8l/datasets/images/val')
-train_txt_path = os.path.join(cwd,'~/Hailo8l/datasets/labels/train')
-val_txt_path = os.path.join(cwd,'~/Hailo8l/datasets/labels/val')
+train_img_path = os.path.join(cwd,'/home/hmi/Hailo8l/datasets/images/train')
+val_img_path = os.path.join(cwd,'/home/hmi/Hailo8l/datasets/images/val')
+train_txt_path = os.path.join(cwd,'/home/hmi/Hailo8l/datasets/labels/train')
+val_txt_path = os.path.join(cwd,'/home/hmi/Hailo8l/datasets/labels/val')
 
 
 
