@@ -282,7 +282,32 @@ cd ..
 ```bash
 python hailo-rpi5-examples/basic_pipelines/detection.py -i rpi --hef pppv_v1.hef
 ```
+#### Alternative without ai hat running on cpu
+##### from ~/Documents
+```bash
+mkdir workspace/pppv
+cd workspace/pppv
+```
+#####create virtual enviroment
+```bash
+python3 -m venv --system-site-packages venv
+```
 
+##### activate virtual enviroment
+```bash
+source venv/bin/activate
+```
+
+##### update and install pip
+```bash
+sudo apt update
+sudo apt install python3-pip-y
+pip install -U pip
+```
+##### install ultralytics
+```bash
+pip install ultralytics[export]
+```
 
 # How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov11n on Windows (WSL2 Ubuntu 24.04) Custom Objects and Labels
 
