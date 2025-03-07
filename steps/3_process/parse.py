@@ -1,8 +1,8 @@
 from hailo_sdk_client import ClientRunner
 
 onnx_model_name = 'best'
-onnx_path = 'home/hmi/Hailo8l/model/runs/detect/retrain_yolov8s/weights/best.onnx'
-har_path = 'home/hmi/Hailo8l/model/runs/detect/retrain_yolov8s/weights/best.har'
+onnx_path = '/home/hmi/Hailo8l/model/runs/detect/retrain_yolov8s/weights/best.onnx'
+har_path = '/home/hmi/Hailo8l/model/runs/detect/retrain_yolov8s/weights/best.har'
 
 chosen_hw_arch = 'hailo8l'
 
