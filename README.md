@@ -165,16 +165,8 @@ wsl --shutdown
 
 ## WSL Ubuntu setup
 ```bash
-#Install Windows Subsystem for Linux.
-wsl.exe --install
-#check status
-wsl--status
-#get online available linux distros
-wsl --list --online
-#install a distro
-wsl --install Ubuntu-22.04
-#open linux distro
-wsl -d Ubuntu-22.04
+wsl --install Ubuntu-24.04
+wsl -d Ubuntu-24.04
 ```
 
 ### Get Guide
