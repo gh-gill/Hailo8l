@@ -58,7 +58,7 @@ pip install ultralytics
 ###### ~/Hailo8l/datasets/images/train */val 
 ###### ~/Hailo8l/datasets/labels/train */val                                        
 ```bash
-python steps/2_install_dataset/train_val_split.py --datapath="datasets/data" --train_pct=.8
+python steps/2_install_dataset/train_val_split.py --datapath="~/Hailo8l/datasets/data" --train_pct=.8
 ```
 ##### Edit files
 ###### Edit "config.yaml" & "labels.json" to match your dataset
@@ -70,7 +70,7 @@ yolo detect train data=~/Hailo8l/config.yaml model=yolov8s.pt name=retrain_yolov
 
 ### Convert to ONNX
 ```bash
-cd /Hailo8l/model/runs/detect/retrain_yolov8s/weights   
+cd ~/Hailo8l/model/runs/detect/retrain_yolov8s/weights   
 ```
 
 ```bash
@@ -78,13 +78,11 @@ yolo export model=./best.pt imgsz=640 format=onnx opset=11
 ```
 
 ```bash
-cd /Hailo8l && deactivate
+cd ~/Hailo8l && deactivate
 ```
 
 ### Install Hailo
 ```bash
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt-get update
 sudo apt-get install python3.8 python3.8-venv python3.8-dev
 ```
 
