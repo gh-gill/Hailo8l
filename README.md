@@ -209,13 +209,11 @@ pip install ultralytics
 ```bash
 python steps/2_install_dataset/train_val_split.py --datapath="datasets/data" --train_pct=.8
 ```
+##### Edit files
+###### Edit "config.yaml" & "labels.json" to match your dataset
 
+##### train model as pytorch
 ```bash
-cd model
-```
-
-```bash
-#train model as pytorch
 yolo detect train data=~/Hailo8l/config.yaml model=yolov8s.pt name=retrain_yolov8s project=./model/runs/detect epochs=100 batch=16
 ```
 
