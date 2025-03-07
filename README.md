@@ -93,8 +93,8 @@ pip install pygraphviz
 ```
 
 ```bash
-pip install whl/hailo_dataflow_compiler-3.27.0-py3-none-linux_x86_64.whl
-pip install whl/hailo_model_zoo-2.11.0-py3-none-any.whl
+pip install whl/hailo_dataflow_compiler-3.28.0-py3-none-linux_x86_64.whl
+pip install whl/hailo_model_zoo-2.12.0-py3-none-any.whl
 ```
 
 ```bash
