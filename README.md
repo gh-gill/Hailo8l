@@ -35,11 +35,12 @@ docker pull ubuntu:jammy
 ```
 
 ##### Create a Persisting Data folder "~/Documents/docker/hailo_yolov8s"
+
+#### Create container
 ```bash
 docker run -it --name hailo_yolov8s -v ~/Documents/docker/hailo_yolov8s:/data ubuntu:jammy /bin/bash
 ```
 
-#### Create container
 ```bash
 cd data
 ```
