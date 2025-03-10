@@ -28,7 +28,7 @@ def preproc(image, output_height=640, output_width=640, resize_side=640):
         return tf.squeeze(cropped_image)
 
 
-images_path = '~/Hailo8l/datasets/images/train/'
+images_path = '/home/hmi/Hailo8l/datasets/images/train/'
 images_list = [img_name for img_name in os.listdir(images_path) if
                os.path.splitext(img_name)[1] == '.jpg']
 
@@ -44,7 +44,7 @@ print(calib_dataset.shape)
 
 # Second, we will load our parsed HAR from the Parsing Tutorial
 
-path_l = '~/Hailo8l/model/runs/detect/retrain_yolov11n/weights/'
+path_l = '/home/hmi/Hailo8l/model/runs/detect/retrain_yolov11s/weights/'
 model_name = path_l+'best'
 hailo_model_har_name = f'{model_name}.har'
 assert os.path.isfile(hailo_model_har_name), 'Please provide valid path for HAR file'
@@ -57,7 +57,7 @@ normalization1 = normalization([0.0, 0.0, 0.0], [255.0, 255.0, 255.0])
 change_output_activation(conv54, sigmoid)
 change_output_activation(conv65, sigmoid)
 change_output_activation(conv80, sigmoid)
-nms_postprocess("~/Hailo8l/config/postprocess_config/yolov11n_nms_config.json", meta_arch=yolov8, engine=cpu)
+nms_postprocess("/home/hmi/Hailo8l/config/postprocess_config/yolov11s_nms_config.json", meta_arch=yolov8, engine=cpu)
 
 allocator_param(width_splitter_defuse=disabled)
 '''
