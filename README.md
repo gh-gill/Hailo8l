@@ -20,7 +20,7 @@ wsl -d <Distro Name>
 wsl --shutdown
 ```
 
-# How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov8s on Windows (WSL2 Ubuntu-22.02) Custom Objects and Labels
+# 1. How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov8s on Windows (WSL2 Ubuntu-22.02) Custom Objects and Labels
 
 ### On Windows WSL Ubuntu setup (If using docker skip this step)
 ```bash
@@ -180,7 +180,7 @@ python hailo-rpi5-examples/basic_pipelines/detection.py -i rpi --hef best_quanti
 ```
 
 
-# How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov11n on Windows (WSL2 Ubuntu 24.04) Custom Objects and Labels
+# 2. How to Setup Raspberry Pi 5 with Hailo8l AI Kit using yolov11n on Windows (WSL2 Ubuntu 24.04) Custom Objects and Labels
 
 ### On Windows WSL Ubuntu setup (If using docker skip this step)
 ```bash
