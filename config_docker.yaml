@@ -1,0 +1,5 @@
+train: /data/Hailo8l/datasets/images/train
+val: /data/Hailo8l/datasets/images/val
+
+nc: 1
+names: ['Print']
