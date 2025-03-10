@@ -25,28 +25,37 @@ wsl --shutdown
 ### On Windows WSL Ubuntu setup (If using docker skip this step)
 ```bash
 wsl --install Ubuntu-22.04
+cd ~
 ``` 
 
 ### Alternative with Docker
 ```bash
 docker pull ubuntu:jammy
 ```
-#### Create container
-```bash
-docker pull ubuntu:jammy
-```
+
 ##### Create a Persisting Data folder "~/Documents/docker/hailo_yolov8s"
 ```bash
 docker run -it --name hailo_yolov8s -v ~/Documents/docker/hailo_yolov8s:/data ubuntu:jammy /bin/bash
 ```
 
+#### Create container
+```bash
+cd data
+```
+
+```bash
+apt-get update
+apt-get install git
+apt-get install software-properties-common
+```
+
 ### Get Guide
 ```bash
-cd ~
 git clone https://github.com/gh-gill/Hailo8l.git
 ```
 
 ### Add deadsnakes repository
+#### Note if using Docker use all commands without sudo
 ```bash
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
@@ -70,6 +79,10 @@ pip install ultralytics
 ###### ~/Hailo8l/datasets/labels/train */val                                        
 ```bash
 python steps/2_install_dataset/train_val_split.py --datapath="/home/hmi/Hailo8l/datasets/data" --train_pct=.8
+```
+##### Or for Docker
+```bash
+python steps/2_install_dataset/train_val_split.py --datapath="/data/Hailo8l/datasets/data" --train_pct=.8
 ```
 ##### Edit files
 ###### Edit "Hailo8l/config.yaml", "Hailo8l/labels.json", "Hailo8l/config/postprocess_config/yolov8s_nms_config.json" & "Hailo8l/steps/4_test/labels.txt" to match your dataset
