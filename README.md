@@ -27,6 +27,19 @@ wsl --shutdown
 wsl --install Ubuntu-22.04
 ``` 
 
+### Alternative with Docker
+```bash
+docker pull ubuntu:jammy
+```
+#### Create container
+```bash
+docker pull ubuntu:jammy
+```
+##### Create a Persisting Data folder "~/Documents/docker/hailo_yolov8s"
+```bash
+docker run -it --name hailo_yolov8s -v ~/Documents/docker/hailo_yolov8s:/data ubuntu:jammy /bin/bash
+```
+
 ### Get Guide
 ```bash
 cd ~
@@ -91,6 +104,7 @@ sudo apt-get update
 sudo apt-get install build-essential python3-dev graphviz graphviz-dev python3-tk
 pip install pygraphviz
 ```
+#### Download files from https://hailo.ai/developer-zone/software-downloads/ and place in "hmoe/hmi/Hailo8l/whl/"
 
 ```bash
 pip install whl/hailo_dataflow_compiler-3.27.0-py3-none-linux_x86_64.whl
@@ -101,7 +115,7 @@ pip install whl/hailo_model_zoo-2.11.0-py3-none-any.whl
 ```
 
 ```bash
-git clone https://github.com/hailo-ai/hailo_model_zoo.git
+git clone https://github.com/gh-gill/hailo_model_zoo.git
 ```
 
 ### Install Custom dataset
@@ -214,6 +228,8 @@ sudo apt-get update
 sudo apt-get install build-essential python3-dev graphviz graphviz-dev python3-tk
 pip install pygraphviz scipy==1.9.3
 ```
+
+#### Download files from https://hailo.ai/developer-zone/software-downloads/ and place in "hmoe/hmi/Hailo8l/whl/"
 
 ```bash
 pip install whl/hailo_dataflow_compiler-3.30.0-py3-none-linux_x86_64.whl
