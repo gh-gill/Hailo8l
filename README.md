@@ -86,20 +86,29 @@ python steps/2_install_dataset/train_val_split.py --datapath="/data/Hailo8l/data
 ##### Edit files
 ###### Edit "/data/Hailo8l/config.yaml", "/data/Hailo8l/labels.json", "/data/Hailo8l/config/postprocess_config/yolov8s_nms_config.json" & "/data/Hailo8l/steps/4_test/labels.txt" to match your dataset
 
-##### train model as pytorch
+##### WSL train model as pytorch
 ```bash
 yolo detect train data=/data/Hailo8l/config.yaml model=yolov8s.pt name=retrain_yolov8s project=./model/runs/detect epochs=100 batch=16
+```
+##### Docker train model as pytorch
+```bash
+yolo detect train data=/data/Hailo8l/config_docker.yaml model=yolov8s.pt name=retrain_yolov8s project=./model/runs/detect epochs=100 batch=16
 ```
 
 ### Convert to ONNX
 ```bash
-cd /data/Hailo8l/model/runs/detect/retrain_yolov8s/weights   
+cd model/runs/detect/retrain_yolov8s/weights   
 ```
 
 ```bash
 yolo export model=./best.pt imgsz=640 format=onnx opset=11 
 ```
 
+##### WSL 
+```bash
+cd home/hmi/Hailo8l && deactivate
+```
+##### Docker
 ```bash
 cd /data/Hailo8l && deactivate
 ```
