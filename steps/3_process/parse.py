@@ -4,7 +4,8 @@ onnx_model_name = 'best'
 onnx_path = 'model/runs/detect/retrain_yolov8s/weights/best.onnx'
 har_path = 'model/runs/detect/retrain_yolov8s/weights/best.har'
 
-chosen_hw_arch = 'hailo8l'
+#halo8 = 32TOPS hailo8l = 16 TOPS
+chosen_hw_arch = 'hailo8'
 
 runner = ClientRunner(hw_arch=chosen_hw_arch)
 hn, npz = runner.translate_onnx_model(
