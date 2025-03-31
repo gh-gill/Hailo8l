@@ -147,6 +147,7 @@ python steps/2_install_dataset/create_custom_tfrecord.py val
 python steps/2_install_dataset/create_custom_tfrecord.py train
 ```
 ### Parse
+#### edit parse.py #halo8 = 32TOPS hailo8l = 16 TOPS
 ```bash
 python steps/3_process/parse.py
 ```
@@ -261,6 +262,7 @@ pip install whl/hailo_model_zoo-2.14.0-py3-none-any.whl
 ```
 
 Parse
+#### edit parse.py #halo8 = 32TOPS hailo8l = 16 TOPS
 ```bash
 python steps/3_process/parse_yolo11s.py
 ```
