@@ -38,7 +38,10 @@ docker pull ubuntu:jammy
 
 #### Create container
 ```bash
-docker run -it --name hailo_yolov8s -v ~/Documents/docker/hailo_yolov8s:/data ubuntu:jammy /bin/bash
+# Run with CPU
+docker run -it --ipc=host --name hailo_yolov8s -v ~/Documents/docker/hailo_yolov8s:/data ubuntu:jammy /bin/bash
+# Run with all GPUs
+sudo docker run -it --ipc=host --gpus all --name hailo_yolov8s -v ~/Documents/docker/hailo_yolov8s:/data ubuntu:jammy /bin/bash
 ```
 
 ```bash
